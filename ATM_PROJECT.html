@@ -3,42 +3,28 @@
         <title>ATM</title>
     </head>
     <body>
-
-        
 <script>
-    
-   
-    
 const pin = "1234";
-// var BANKNAME = parseInt(prompt("Dear "+ NAME+ " What is your bank name?\n 1. satate Bank\n2.Union bank\n3.HDFC\n4.Bank of baoroda\n5.canara\n6.Punjab national bank\n7.indian bank\n8.Others"));
-
 let attemptsLeft = 3
-
-
+alert("welcomeATM\ninsert of card")
 const name = prompt("Please enter your full name");
 for (attemptsLeft; attemptsLeft >= 0; attemptsLeft--) {
   if (attemptsLeft === 0) {
     alert("Incorrect pin. Please contact your bank pin ");
     break;
-    // var BANKNAME = parseInt(prompt("Dear "+ NAME+ " What is your bank name?\n 1. satate Bank\n2.Union bank\n3.HDFC\n4.Bank of baoroda\n5.canara\n6.Punjab national bank\n7.indian bank\n8.Others"));
-
-  }
-  const userAttempt = prompt(`Please enter your PIN number to access your bank account. You have ${attemptsLeft} left.`);
+}
+const userAttempt = prompt(`Please enter your PIN number to access your bank account. You have ${attemptsLeft} left.`);
   if (userAttempt === pin) {
     alert("Welcome " + name);
     break;
   }
 }
-
-
-    var balance = 100;
-  
-      function get_balance() {
+var balance = 100;
+    function get_balance() {
           alert('Your current balance is: '+balance);
           atm();
-      }
-  
-      function make_deposit() {
+         }
+    function make_deposit() {
           var deposit = parseFloat(prompt('How much would you like to deposit?'));
           if (isNaN(deposit) || deposit === '') {
               alert('Error: please enter a number!');
@@ -48,8 +34,7 @@ for (attemptsLeft; attemptsLeft >= 0; attemptsLeft--) {
               get_balance();
           }
       }
-  
-      function make_withdrawal() {
+    function make_withdrawal() {
 		var withdrawal = parseFloat(prompt('How much would you like to withdrawal?'));
 		if (isNaN(withdrawal) || withdrawal === '') {
 			alert('Error: please enter a number!');
@@ -62,25 +47,21 @@ for (attemptsLeft; attemptsLeft >= 0; attemptsLeft--) {
 		}
 	}
   
-      function error() {
-          alert('thank you .');
-          
-      }
-  
-      function exit() {
-          var confirm_leave = confirm('You have selected exit.');
-          if (confirm_leave) {
+    function error() {
+          alert('there is something wrong');
+     }
+    function exit() {
+          var confirm_leave = confirm('thanku');
+        if (confirm_leave) {
               window.close();
-          } else {
-              alert("thanku you ");
+          }
+            else{
+            alert("there is error")
           }
       }
-  
-      function atm() {
-  
-          var choice = parseInt(prompt('Select a choice\n 1.) Balance\n 2.) Deposit\n3.) Withdrawal\n 4.) Exit')); //prompt user for choice.
-  
-          if (choice === 1) {
+    function atm() {
+    var choice = parseInt(prompt('Select a choice\n 1.) Balance\n 2.) Deposit\n3.) Withdrawal\n 4.) Exit')); //prompt user for choice.
+            if (choice === 1) {
               get_balance();
           } else if (choice === 2) {
               make_deposit();
@@ -92,11 +73,7 @@ for (attemptsLeft; attemptsLeft >= 0; attemptsLeft--) {
               error();
           }
       }
-  
-      atm();
-   
-  
-  </script>
-    </body>
-
+  atm();
+</script>
+</body>
 </html>
